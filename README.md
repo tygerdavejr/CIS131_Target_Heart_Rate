@@ -11,17 +11,17 @@ Professor Kevin Chang
 # Import modules, declare CONSTANTS, set variables, build dictionaries and 
 # build classes
 
-    FUNCTION
+    FUNCTION input age
  
     END FUNCTION
 
 
-    FUNCTION
+    FUNCTION calculate heart rate
  
     END FUNCTION
 
 
-    FUNCTION
+    FUNCTION display report
  
     END FUNCTION
 
