@@ -11,7 +11,7 @@ Professor Kevin Chang
 # Import modules, declare CONSTANTS, set variables, build dictionaries and 
 # build classes
 
-SENTINEL = 0
+CONSTANT SENTINEL = 0
 
 FUNCTION input Age()
     # Ask user for age and confirm it is an integer value
