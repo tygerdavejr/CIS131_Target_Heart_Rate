@@ -1,0 +1,19 @@
+#Expected Results
+
+Input: 62
+AT AGE 62
+Target heart rate is between 79 and 134
+
+Thank you for using Heart Rate Calculator
+
+Input: 0
+*** The age must be between 1 and 110 (or -99 to exit) ***
+
+Input: Letters, strings, floats
+*** Your entry must be an integer.  Please try again. ***
+
+Input:  -99
+Thank you for using Heart Rate Calculator.
+
+
+Actual results:
