@@ -11,7 +11,6 @@ Target heart rate is between 79 and 134
 Input: 1
 AT AGE 1
 Target heart rate is between 110 and 186
-(this might be 109 as well, due to rounding vs forcing decimal places)
 
 Input: 110
 AT AGE 110
