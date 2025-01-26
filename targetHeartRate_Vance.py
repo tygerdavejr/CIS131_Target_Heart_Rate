@@ -12,11 +12,17 @@ SENTINEL = -99
 
 def inputAge():
     '''
-    Prompt user for age, confirm it is an integer value, and confirm it 
-    falls within expected range of 1 to 110.
+    Prompt user for age, then checks for the following conditions:
+    - If the age is not an integer, capture the error, print an error
+      message and prompt the user for another value
+    - If the age is the SENTINEL, print an exit message and exit module
+    - If the age does not fall within the expected range of 1 to 110,
+      print an error message and prompt the user for another value
 
-    action: Prompt user for age, confirm input is an integer and falls
-            within expected range.
+    action: Prompt user for age.  Loop while the age is not an integer, is
+            not the SENTINEL value, or falls outside of limited values.
+            Exit the method when age is an integer and falls within
+            allowed range of 1 to 110.
     input:  age
     output: entry prompt, error message (if needed)
     return: age
@@ -29,36 +35,20 @@ def inputAge():
         try: 
             # Prompt user for age as an integer
             age = int(input("Enter an age between 1 and 110 (or -99 to exit): "))
-            if age < 1 or age > 110:
+
+            if age == SENTINEL:
+                # If age == SENTINEL print message and exit module
+                print("\nThank you for using Heart Rate Calculator.\n")
+                raise SystemExit
+
+            elif age < 1 or age > 110:
+                # Else if age is not in expected range print message and reset input loop
                 print("\n*** The age must be between 1 and 110 (or -99 to exit) ***")
-                age = ''  # If age out of range loop again
+                age = ''
+    
         except ValueError:
-            # Capture error if age is not an integer, set age to null value
+            # Capture error if age is not an integer    
             print("\n*** Your entry must be an integer.  Please try again. ***")
-    return age
-
-
-def determineAge():
-    '''
-    Call inputAge to get an age value, then determine if it is:
-    - The SENTINEL value (if so, print exit message and quit)
-    - If it is within expected age, return the age value
-
-    action: call inputAge to get age, validate age for SENTINEL or in range
-    input:  age from inputAge function
-    output: exit message
-    return: age
-    '''
-    # call inputAge
-    age = inputAge()
-
-    # If age is not within expected value either exit or reenter age
-    # while age < 1 or age > 110:
-    if age == SENTINEL:
-        print("\nThank you for using Heart Rate Calculator.\n")
-        raise SystemExit
-
-    # Age is within expected value return age to main()
     return age
 
 
@@ -97,7 +87,7 @@ def main():
     return: None
     '''
 
-    age = determineAge()
+    age = inputAge()
     lowTargetHeartRate, highTargetHeartRate = determineTargetHeartRates(age)
 
     # Display Heart Rate report
@@ -109,4 +99,5 @@ def main():
 
 
 if __name__ == '__main__':
+    main()
     main()
