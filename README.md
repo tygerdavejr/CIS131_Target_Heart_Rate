@@ -38,11 +38,14 @@ FUNCTION determine Age()
 END FUNCTION
 
 
-FUNCTION 
-
-
-
-
+FUNCTION determine target heart rates (age)
+    # Calculate the maximum heart rate first (220 - age), then calculate the 
+    # low target heart rate (50%) and high target heart rate (85%) from that value.
+    maximum heart rate = 220 - age
+    low target heart rate = maximum heart rate * .5
+    high target heart rate = maximum heart rate * .85
+    return low target heart rate, high target heart rate
+END FUNCTION
 
 
 # MAIN PROCESSING
@@ -53,7 +56,7 @@ FUNCTION main()
     PRINT "This module determines target heart rate based on an age"
     PRINT "value of 1 to 110."   
     age = determine age() from FUNCTION
-    min, max heart rate = target heart rates(age) from FUNCTION  # Pass this back as a tupile
+    low target heart rate and high target heart rate = determine target heart rates(age) from FUNCTION  # Pass this back as a tupile
     PRINT "At age " + age
     PRINT "Target heart rate is between " + minimum heart rate + " and " + maximum heart rate" 
 END FUNCTION
