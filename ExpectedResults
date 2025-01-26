@@ -1,19 +1,53 @@
-#Expected Results
+# Expected Results
+# The test entries for the module will be 0, -25, 120, 50.65, Alphabet, 62, 1, 110
+# Expecting non-integer message for values that are not integers, expecting
+# out of range messages for values that are integers but do not fall between
+# 1 and 110 (inclusively)
 
 Input: 62
 AT AGE 62
 Target heart rate is between 79 and 134
 
-Thank you for using Heart Rate Calculator
+Input: 1
+AT AGE 1
+Target heart rate is between 110 and 186
+(this might be 109 as well, due to rounding vs forcing decimal places)
 
-Input: 0
+Input: 110
+AT AGE 110
+Target heart rate is between 55 and 94
+
+ACTUAL OUTPUT
+Enter an age between 1 and 110 (or -99 to exit): 0
+
 *** The age must be between 1 and 110 (or -99 to exit) ***
+Enter an age between 1 and 110 (or -99 to exit): -25
 
-Input: Letters, strings, floats
+*** The age must be between 1 and 110 (or -99 to exit) ***
+Enter an age between 1 and 110 (or -99 to exit): 120
+
+*** The age must be between 1 and 110 (or -99 to exit) ***
+Enter an age between 1 and 110 (or -99 to exit): 50.65
+
 *** Your entry must be an integer.  Please try again. ***
+Enter an age between 1 and 110 (or -99 to exit): Alphabet
 
-Input:  -99
+*** Your entry must be an integer.  Please try again. ***
+Enter an age between 1 and 110 (or -99 to exit): 62
+
+AT AGE 62
+Target heart rate is between 79 and 134.
+
 Thank you for using Heart Rate Calculator.
 
+Enter an age between 1 and 110 (or -99 to exit): 1
 
-Actual results:
+AT AGE 1
+Target heart rate is between 110 and 186.
+
+Thank you for using Heart Rate Calculator.
+
+AT AGE 110
+Target heart rate is between 55 and 94.
+
+Thank you for using Heart Rate Calculator.
