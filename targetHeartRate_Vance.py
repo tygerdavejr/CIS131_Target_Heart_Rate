@@ -3,14 +3,14 @@
     action: a. Calculates target heart rates based off age
             b. Display results
     author: David Vance
-    date: 22 January 2025
+    date:   6 June 2025
 '''
 
 #global variables
 SENTINEL = -99
 
 
-def inputAge():
+def input_age():
     '''
     Prompt user for age, then checks for the following conditions:
     - If the age is not an integer, capture the error, print an error
@@ -52,7 +52,7 @@ def inputAge():
     return age
 
 
-def determineTargetHeartRates(age):
+def determine_target_heart_rates(age):
     '''
     Calculate maximum target heart rate from age, then determine the low target heart 
     rate (50%) and the high target heart rate (85%).  
@@ -65,11 +65,11 @@ def determineTargetHeartRates(age):
     # Calculate the maximum heart rate first (220 - age), then calculate the 
     # low target heart rate (50%) and high target heart rate (85%) from the
     # maximum heart rate.
-    maximumTargetHeartRate = 220 - age
-    lowTargetHeartRate = maximumTargetHeartRate * .5     # 50%
-    highTargetHeartRate = maximumTargetHeartRate * .85   # 85%
+    maximum_target_heart-rate = 220 - age
+    low_target_heart_rate = maximum_target_heart_rate * .5     # 50%
+    high_target_heart_rate = maximum_target_heart-rate * .85   # 85%
 
-    return lowTargetHeartRate, highTargetHeartRate
+    return low_target_heart_rate, high_target_heart_rate
 
 
 # MAIN PROCESSING
@@ -88,7 +88,7 @@ def main():
     '''
 
     age = inputAge()
-    lowTargetHeartRate, highTargetHeartRate = determineTargetHeartRates(age)
+    low_target_heart_rate, high_target_heart_rate = determine_target_heart_rates(age)
 
     # Display Heart Rate report
     print(f'\nAT AGE {age}')
