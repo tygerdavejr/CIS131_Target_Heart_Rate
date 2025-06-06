@@ -65,9 +65,9 @@ def determine_target_heart_rates(age):
     # Calculate the maximum heart rate first (220 - age), then calculate the 
     # low target heart rate (50%) and high target heart rate (85%) from the
     # maximum heart rate.
-    maximum_target_heart-rate = 220 - age
+    maximum_target_heart_rate = 220 - age
     low_target_heart_rate = maximum_target_heart_rate * .5     # 50%
-    high_target_heart_rate = maximum_target_heart-rate * .85   # 85%
+    high_target_heart_rate = maximum_target_heart_rate * .85   # 85%
 
     return low_target_heart_rate, high_target_heart_rate
 
@@ -87,12 +87,12 @@ def main():
     return: None
     '''
 
-    age = inputAge()
+    age = input_age()
     low_target_heart_rate, high_target_heart_rate = determine_target_heart_rates(age)
 
     # Display Heart Rate report
     print(f'\nAT AGE {age}')
-    print(f'Target heart rate is between {lowTargetHeartRate:.0f} and {highTargetHeartRate:.0f}.')
+    print(f'Target heart rate is between {low_target_heart_rate:.0f} and {high_target_heart_rate:.0f}.')
     print("\nThank you for using Heart Rate Calculator.\n")
 
     return
