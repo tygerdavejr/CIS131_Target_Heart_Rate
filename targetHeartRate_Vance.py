@@ -1,5 +1,5 @@
 '''
-    script: targetHeartRate_Vance.py
+    script: target_heart_rate_Vance.py
     action: a. Calculates target heart rates based off age
             b. Display results
     author: David Vance
