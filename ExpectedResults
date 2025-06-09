@@ -1,52 +1,31 @@
 # Expected Results
-# The test entries for the module will be 0, -25, 120, 50.65, Alphabet, 62, 1, 110
+# The test entries for the module will be 0, -25, 121, 50.65, Alphabet, 62
 # Expecting non-integer message for values that are not integers, expecting
 # out of range messages for values that are integers but do not fall between
 # 1 and 110 (inclusively)
 
-Input: 62
-AT AGE 62
-Target heart rate is between 79 and 134
-
-Input: 1
-AT AGE 1
-Target heart rate is between 110 and 186
-
-Input: 110
-AT AGE 110
-Target heart rate is between 55 and 94
-
 ACTUAL OUTPUT
-Enter an age between 1 and 110 (or -99 to exit): 0
+Target Heart Rate Calculator
+Enter your age from 0 to 120 (or 'q' to quit)
+Age: 0
 
-*** The age must be between 1 and 110 (or -99 to exit) ***
-Enter an age between 1 and 110 (or -99 to exit): -25
+RESULTS FOR AGE 0:
+Maximum Heart Rate: 220 beats per minute
+Target Heart Rate Range: 110 to 187 beats per minute
 
-*** The age must be between 1 and 110 (or -99 to exit) ***
-Enter an age between 1 and 110 (or -99 to exit): 120
+Age: -25
+Error: Please enter a valid age (0-120).
+Age: 121
+Error: Please enter a valid age (0-120).
+Age: 50.65
+Error: Please enter a valid age (0-120).
+Age: Alphabet
+Error: Please enter a valid age (0-120).
+Age: 62
 
-*** The age must be between 1 and 110 (or -99 to exit) ***
-Enter an age between 1 and 110 (or -99 to exit): 50.65
+RESULTS FOR AGE 62:
+Maximum Heart Rate: 158 beats per minute
+Target Heart Rate Range: 79 to 134 beats per minute
 
-*** Your entry must be an integer.  Please try again. ***
-Enter an age between 1 and 110 (or -99 to exit): Alphabet
-
-*** Your entry must be an integer.  Please try again. ***
-Enter an age between 1 and 110 (or -99 to exit): 62
-
-AT AGE 62
-Target heart rate is between 79 and 134.
-
-Thank you for using Heart Rate Calculator.
-
-Enter an age between 1 and 110 (or -99 to exit): 1
-
-AT AGE 1
-Target heart rate is between 110 and 186.
-
-Thank you for using Heart Rate Calculator.
-
-AT AGE 110
-Target heart rate is between 55 and 94.
-
-Thank you for using Heart Rate Calculator.
+Age: q
+Thank you for using Target Heart Rate Calculator.
