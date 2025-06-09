@@ -4,8 +4,8 @@ Determine target heart rate by age
 PROGRAM Target Heart Rate
 David Vance
 CIS 131 - Programming and Problem Solving II
-Professor Kevin Chang
-22 January 2025
+Professor Jim Delaune
+9 June 2025
 
 # INITIATIONS
 # Import modules, declare CONSTANTS, set variables, build dictionaries and 
